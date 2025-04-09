@@ -5,7 +5,7 @@
 class BeszelAgent < Formula
   desc "Lightweight server monitoring hub with historical data, docker stats, and alerts."
   homepage "https://beszel.dev"
-  version "0.10.2-SNAPSHOT-d79111f"
+  version "0.10.2"
   license "MIT"
 
   on_macos do
