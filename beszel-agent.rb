@@ -11,25 +11,25 @@ class BeszelAgent < Formula
   on_macos do
     on_intel do
       url "https://github.com/henrygd/beszel/releases/download/v0.10.2/beszel-agent_darwin_amd64.tar.gz"
-      sha256 "c17bede9436c439ebddabc7ac50f4d3ce10f7dcf60d2dbd72386106622503eff"
+      sha256 "b954bbb35bc5e8d7d9a7b51c49c216c6de7bc1ed9a4dd32c6026f00cfac19c0d"
 
       def install
         bin.install "beszel-agent"
-        (bin/"beszel-agent-launcher").write <<~EOS
+        (bin/"beszel-agent-launcher").write <<~eos
           #!/bin/bash
           set -a
-          if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
-            source "$HOME/.config/beszel/beszel-agent.env"
+          if [ -f "$home/.config/beszel/beszel-agent.env" ]; then
+            source "$home/.config/beszel/beszel-agent.env"
           fi
           set +a
           exec #{bin}/beszel-agent "$@"
-        EOS
+        eos
         (bin/"beszel-agent-launcher").chmod 0755
       end
     end
     on_arm do
       url "https://github.com/henrygd/beszel/releases/download/v0.10.2/beszel-agent_darwin_arm64.tar.gz"
-      sha256 "e9b6e2884d81141155aee150a7bf54080404808acb61017352099248b3b75837"
+      sha256 "95f059dc008c66416f12d96d5c6edd6a792a8ac42d6ece734edeb7c2cc8153d2"
 
       def install
         bin.install "beszel-agent"
@@ -51,7 +51,7 @@ class BeszelAgent < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/henrygd/beszel/releases/download/v0.10.2/beszel-agent_linux_amd64.tar.gz"
-        sha256 "ef26b17c40f29bb0c7732ff9e3fbe1f6539d92408ba270479f4f6a0fc39e2390"
+        sha256 "b954bbb35bc5e8d7d9a7b51c49c216c6de7bc1ed9a4dd32c6026f00cfac19c0d"
 
         def install
           bin.install "beszel-agent"
@@ -71,7 +71,7 @@ class BeszelAgent < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/henrygd/beszel/releases/download/v0.10.2/beszel-agent_linux_arm64.tar.gz"
-        sha256 "b26d7d2ab72a51b82170860b67a3f381fff63ab2a8628c0bc07ed77ab2267c4d"
+        sha256 "95f059dc008c66416f12d96d5c6edd6a792a8ac42d6ece734edeb7c2cc8153d2"
 
         def install
           bin.install "beszel-agent"
