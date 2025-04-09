@@ -92,6 +92,8 @@ class BeszelAgent < Formula
 
   service do
     run ["#{bin}/beszel-agent-launcher"]
+    log_path "#{HOME}/.cache/beszel/beszel-agent.log"
+    error_log_path "#{HOME}/.cache/beszel/beszel-agent.log"
     keep_alive true
   end
 end
