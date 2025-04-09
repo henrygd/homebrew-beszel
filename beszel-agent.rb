@@ -51,7 +51,7 @@ class BeszelAgent < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/henrygd/beszel/releases/download/v0.10.2/beszel-agent_linux_amd64.tar.gz"
-        sha256 "b954bbb35bc5e8d7d9a7b51c49c216c6de7bc1ed9a4dd32c6026f00cfac19c0d"
+        sha256 "2a20d2753390cb974f857e2cbede73f26196fdb00843cdffd88b6ad385fea9f3"
 
         def install
           bin.install "beszel-agent"
@@ -71,7 +71,7 @@ class BeszelAgent < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/henrygd/beszel/releases/download/v0.10.2/beszel-agent_linux_arm64.tar.gz"
-        sha256 "95f059dc008c66416f12d96d5c6edd6a792a8ac42d6ece734edeb7c2cc8153d2"
+        sha256 "dd7063052f0b0fa1a4b4b8730523278a4fdb676f33bdc57839f119ed4da872c3"
 
         def install
           bin.install "beszel-agent"
@@ -91,7 +91,7 @@ class BeszelAgent < Formula
   end
 
   service do
-    run: ["#{bin}/beszel-agent-launcher"]
-    keep_alive: true
+    run ["#{bin}/beszel-agent-launcher"]
+    keep_alive true
   end
 end
