@@ -18,8 +18,8 @@ class BeszelAgent < Formula
         (bin/"beszel-agent-launcher").write <<~eos
           #!/bin/bash
           set -a
-          if [ -f "~/.config/beszel/beszel-agent.env" ]; then
-            source "~/.config/beszel/beszel-agent.env"
+          if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
+            source "$HOME/.config/beszel/beszel-agent.env"
           fi
           set +a
           exec #{bin}/beszel-agent "$@"
@@ -36,8 +36,8 @@ class BeszelAgent < Formula
         (bin/"beszel-agent-launcher").write <<~EOS
           #!/bin/bash
           set -a
-          if [ -f "~/.config/beszel/beszel-agent.env" ]; then
-            source "~/.config/beszel/beszel-agent.env"
+          if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
+            source "$HOME/.config/beszel/beszel-agent.env"
           fi
           set +a
           exec #{bin}/beszel-agent "$@"
@@ -56,13 +56,13 @@ class BeszelAgent < Formula
         def install
           bin.install "beszel-agent"
           (bin/"beszel-agent-launcher").write <<~EOS
-            #!/bin/bash
-            set -a
-            if [ -f "~/.config/beszel/beszel-agent.env" ]; then
-              source "~/.config/beszel/beszel-agent.env"
-            fi
-            set +a
-            exec #{bin}/beszel-agent "$@"
+          #!/bin/bash
+          set -a
+          if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
+            source "$HOME/.config/beszel/beszel-agent.env"
+          fi
+          set +a
+          exec #{bin}/beszel-agent "$@"
           EOS
           (bin/"beszel-agent-launcher").chmod 0755
         end
@@ -76,13 +76,13 @@ class BeszelAgent < Formula
         def install
           bin.install "beszel-agent"
           (bin/"beszel-agent-launcher").write <<~EOS
-            #!/bin/bash
-            set -a
-            if [ -f "~/.config/beszel/beszel-agent.env" ]; then
-              source "~/.config/beszel/beszel-agent.env"
-            fi
-            set +a
-            exec #{bin}/beszel-agent "$@"
+          #!/bin/bash
+          set -a
+          if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
+            source "$HOME/.config/beszel/beszel-agent.env"
+          fi
+          set +a
+          exec #{bin}/beszel-agent "$@"
           EOS
           (bin/"beszel-agent-launcher").chmod 0755
         end
