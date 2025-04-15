@@ -18,8 +18,8 @@ class BeszelAgent < Formula
         (bin/"beszel-agent-launcher").write <<~eos
           #!/bin/bash
           set -a
-          if [ -f "$home/.config/beszel/beszel-agent.env" ]; then
-            source "$home/.config/beszel/beszel-agent.env"
+          if [ -f "#{Dir.home}/.config/beszel/beszel-agent.env" ]; then
+            source "#{Dir.home}/.config/beszel/beszel-agent.env"
           fi
           set +a
           exec #{bin}/beszel-agent "$@"
@@ -36,8 +36,8 @@ class BeszelAgent < Formula
         (bin/"beszel-agent-launcher").write <<~EOS
           #!/bin/bash
           set -a
-          if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
-            source "$HOME/.config/beszel/beszel-agent.env"
+          if [ -f "#{Dir.home}/.config/beszel/beszel-agent.env" ]; then
+            source "#{Dir.home}/.config/beszel/beszel-agent.env"
           fi
           set +a
           exec #{bin}/beszel-agent "$@"
@@ -58,8 +58,8 @@ class BeszelAgent < Formula
           (bin/"beszel-agent-launcher").write <<~EOS
             #!/bin/bash
             set -a
-            if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
-              source "$HOME/.config/beszel/beszel-agent.env"
+            if [ -f "#{Dir.home}/.config/beszel/beszel-agent.env" ]; then
+              source "#{Dir.home}/.config/beszel/beszel-agent.env"
             fi
             set +a
             exec #{bin}/beszel-agent "$@"
@@ -78,8 +78,8 @@ class BeszelAgent < Formula
           (bin/"beszel-agent-launcher").write <<~EOS
             #!/bin/bash
             set -a
-            if [ -f "$HOME/.config/beszel/beszel-agent.env" ]; then
-              source "$HOME/.config/beszel/beszel-agent.env"
+            if [ -f "#{Dir.home}/.config/beszel/beszel-agent.env" ]; then
+              source "#{Dir.home}/.config/beszel/beszel-agent.env"
             fi
             set +a
             exec #{bin}/beszel-agent "$@"
