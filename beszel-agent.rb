@@ -107,7 +107,7 @@ class BeszelAgent < Formula
     error_log_path "#{Dir.home}/.cache/beszel/beszel-agent.log"
     keep_alive true
     restart_delay 5
-    name beszel-agent
+    name "beszel-agent"
     process_type :background
   end
 end
