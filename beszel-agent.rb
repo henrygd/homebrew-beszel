@@ -5,13 +5,13 @@
 class BeszelAgent < Formula
   desc "Agent for Beszel, a lightweight server monitoring platform."
   homepage "https://beszel.dev"
-  version "0.18.2"
+  version "0.18.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/henrygd/beszel/releases/download/v0.18.2/beszel-agent_darwin_amd64.tar.gz"
-      sha256 "9bba340b9b18915762e9cf070b8de752b338d2b67c2cd8ed930a81ad6af5aa07"
+      url "https://github.com/henrygd/beszel/releases/download/v0.18.3/beszel-agent_darwin_amd64.tar.gz"
+      sha256 "812f60839718feb832b6841512167e0fa5b30b428383c05b47e0c49ec76a26e8"
 
       def install
         bin.install "beszel-agent"
@@ -28,8 +28,8 @@ class BeszelAgent < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/henrygd/beszel/releases/download/v0.18.2/beszel-agent_darwin_arm64.tar.gz"
-      sha256 "3ca0508a5852ba16d95d1ac9e319fa3f775ca53afb9e2947b69861b9cf83d46a"
+      url "https://github.com/henrygd/beszel/releases/download/v0.18.3/beszel-agent_darwin_arm64.tar.gz"
+      sha256 "61fd956e5f06dced7c49c7604cca16fbc52e4667d48417c76e4835e5aeb84613"
 
       def install
         bin.install "beszel-agent"
@@ -49,8 +49,8 @@ class BeszelAgent < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/henrygd/beszel/releases/download/v0.18.2/beszel-agent_linux_amd64.tar.gz"
-      sha256 "a4f751e6c245d4aa2ddbf645da18edcef7429e1ce2bbf87997e28b743d3caaf1"
+      url "https://github.com/henrygd/beszel/releases/download/v0.18.3/beszel-agent_linux_amd64.tar.gz"
+      sha256 "b6e0517c8e80e745d6297468e1b68a98af18f1dc4307cde91143f580a1a7f3ee"
       def install
         bin.install "beszel-agent"
         (bin/"beszel-agent-launcher").write <<~EOS
@@ -66,8 +66,8 @@ class BeszelAgent < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/henrygd/beszel/releases/download/v0.18.2/beszel-agent_linux_arm.tar.gz"
-      sha256 "9927aac272967bc49fa5be206c3e7f549ccc559e68ee4461d83722f8eb0d1c85"
+      url "https://github.com/henrygd/beszel/releases/download/v0.18.3/beszel-agent_linux_arm.tar.gz"
+      sha256 "01b4c76c776254b6b6d81c3171ce8989262cd8e4903f6cca2d50850752e5196f"
       def install
         bin.install "beszel-agent"
         (bin/"beszel-agent-launcher").write <<~EOS
@@ -83,8 +83,8 @@ class BeszelAgent < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/henrygd/beszel/releases/download/v0.18.2/beszel-agent_linux_arm64.tar.gz"
-      sha256 "55f6cc67601553f5213a4c5db5b57747abfc2b1c2415a42835072ec128e4b1da"
+      url "https://github.com/henrygd/beszel/releases/download/v0.18.3/beszel-agent_linux_arm64.tar.gz"
+      sha256 "233e634349903c5deaed8244b28bd0953c14d0b57b47ea7f83c04d8cfce7dece"
       def install
         bin.install "beszel-agent"
         (bin/"beszel-agent-launcher").write <<~EOS
